@@ -1,4 +1,5 @@
 Summary:	Visualization of monotone ancestry graphs
+Summary(pl):	Wizualizacja grafów dziedziczenia monotone
 Name:		monotone-viz
 Version:	0.10
 Release:	1
@@ -16,6 +17,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 GTK+ application for visualization of monotone ancestry graphs.
+
+%description -l pl
+Aplikacja GTK+ do wizualizacji grafów dziedziczenia monotone.
 
 %prep
 %setup -q
