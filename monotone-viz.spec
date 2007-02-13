@@ -1,5 +1,5 @@
 Summary:	Visualization of monotone ancestry graphs
-Summary(pl.UTF-8):   Wizualizacja grafów dziedziczenia monotone
+Summary(pl.UTF-8):	Wizualizacja grafów dziedziczenia monotone
 Name:		monotone-viz
 Version:	0.10
 Release:	1
