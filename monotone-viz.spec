@@ -1,12 +1,15 @@
+# TODO:
+# - change static linking with libcrypto into dynamic one.
 Summary:	Visualization of monotone ancestry graphs
 Summary(pl.UTF-8):	Wizualizacja grafów dziedziczenia monotone
 Name:		monotone-viz
 Version:	0.15
-Release:	1
+Release:	0.1
 License:	GPL
 Group:		Development/Version Control
 Source0:	http://oandrieu.nerim.net/monotone-viz/%{name}-%{version}-nolablgtk.tar.gz
 # Source0-md5:	3a26011f6cc1aeb7fd50e31ed7f33333
+Patch0:		%{name}-shared_libcrypto.patch
 URL:		http://oandrieu.nerim.net/monotone-viz/
 BuildRequires:	gtk+2-devel >= 1:2.2.0
 BuildRequires:	graphviz
@@ -15,6 +18,8 @@ BuildRequires:	ocaml-camlp4
 BuildRequires:	ocaml-lablgtk2-devel >= 2.4.0
 BuildRequires:	ocaml-lablgtk2-gnome-devel
 BuildRequires:	openssl-devel
+# !!!!!! FIXME !!!!!
+BuildRequires:	openssl-static
 BuildRequires:	sqlite3-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -26,8 +31,10 @@ Aplikacja GTK+ do wizualizacji grafów dziedziczenia monotone.
 
 %prep
 %setup -q
+#%patch0 -p1
 
 %build
+%{__autoconf}
 %configure
 %{__make}
 
