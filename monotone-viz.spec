@@ -9,6 +9,7 @@ License:	GPL
 Group:		Development/Version Control
 Source0:	http://oandrieu.nerim.net/monotone-viz/%{name}-%{version}-nolablgtk.tar.gz
 # Source0-md5:	3a26011f6cc1aeb7fd50e31ed7f33333
+Patch0:		%{name}-shared_libcrypto.patch
 URL:		http://oandrieu.nerim.net/monotone-viz/
 BuildRequires:	gtk+2-devel >= 1:2.2.0
 BuildRequires:	graphviz
@@ -30,6 +31,7 @@ Aplikacja GTK+ do wizualizacji grafów dziedziczenia monotone.
 
 %prep
 %setup -q
+#%patch0 -p1
 
 %build
 %{__autoconf}
