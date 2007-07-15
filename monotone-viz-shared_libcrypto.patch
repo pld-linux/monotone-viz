@@ -5,7 +5,7 @@
  AC_MSG_CHECKING(OpenSSL's crypto lib)
  CRYPTO_LIB_DIR="$(pkg-config openssl --variable=libdir)"
 -CRYPTO_LIB="${CRYPTO_LIB_DIR:-/usr/lib}/libcrypto.a"
-+CRYPTO_LIB="-lcryto"
++CRYPTO_LIB="-lcrypto"
  AC_MSG_RESULT($CRYPTO_LIB)
  AC_SUBST(CRYPTO_LIB)
  
