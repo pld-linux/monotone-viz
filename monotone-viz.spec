@@ -1,12 +1,12 @@
 Summary:	Visualization of monotone ancestry graphs
 Summary(pl.UTF-8):	Wizualizacja grafów dziedziczenia monotone
 Name:		monotone-viz
-Version:	1.0.1
+Version:	1.0.2
 Release:	1
 License:	GPL
 Group:		Development/Version Control
 Source0:	http://oandrieu.nerim.net/monotone-viz/%{name}-%{version}-nolablgtk.tar.gz
-# Source0-md5:	b6996c0360f0b897ee73c9f881763571
+# Source0-md5:	fd08341b456c80d03d7d21c989a1e813
 URL:		http://oandrieu.nerim.net/monotone-viz/
 BuildRequires:	gtk+2-devel >= 1:2.2.0
 BuildRequires:	graphviz
